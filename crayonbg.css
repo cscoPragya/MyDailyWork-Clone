@@ -1,0 +1,31 @@
+.crayon-heading {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* A playful font to enhance the study material look */
+    font-size: 36px;
+    color: #333; /* Text color */
+    padding: 10px 20px;
+    background: #fdd835; /* Base yellow color like a crayon */
+    display: inline-block;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 3px 3px 0px #f57f17, -3px -3px 0px #f57f17; /* Crayon effect shadow */
+}
+
+.crayon-heading::before,
+.crayon-heading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 75%, rgba(255,255,255,0.2) 75%, rgba(255,255,255,0.2) 100%);
+    background-size: 20px 20px;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.crayon-heading::after {
+    background: linear-gradient(135deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.1) 25%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1) 100%);
+    background-size: 20px 20px;
+    z-index: 1;
+}
